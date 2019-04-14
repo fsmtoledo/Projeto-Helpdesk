@@ -1,0 +1,31 @@
+<html>    
+    <body>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td>nome</td>
+                    <td>lastname</td>
+                    <td>departamento</td>
+                    <td>equipamento</td>
+                    <td>descricao</td>
+                    <td>data</td>
+                    <td colspan="1">
+                </tr>
+            </thead>
+            <tbody>
+                <% @chamados.each do |chamado| %>
+                    <tr>
+                        <td><%= chamado.nome %></td>
+                        <td><%= chamado.lastname %></td>
+                        <td><%= chamado.departamento %></td>
+                        <td><%= chamado.equipamento %></td>
+                        <td><%= chamado.descricao %></td>
+                        <td><%= chamado.data %></td>
+                        <td><%= button_to "Remover", chamado, method: :delete, class:"btn btn-danger",
+                        data: {confirm: "Tem certeza que deseja remover o chamado de #{chamado.nome}?"} %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </body>
+</html>

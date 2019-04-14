@@ -1,0 +1,30 @@
+<%= flash[:notice] %>
+<html> 
+    <body>
+    <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <td><strong>Nome</strong></td>
+                    <td><strong>Lastname</strong></td>
+                    <td><strong>Departamento</strong></td>
+                    <td><strong>Equipamento</strong></td>
+                    <td><strong>Data</strong></td>
+                    <td colspan="1">
+                </tr>
+            </thead>
+            <tbody>
+                <% @chamados.each do |chamado| %>
+                    <tr>
+                        <td><%= chamado.nome %></td>
+                        <td><%= chamado.lastname %></td>
+                        <td><%= chamado.departamento %></td>
+                        <td><%= chamado.equipamento %></td>
+                        <td><%= chamado.data %></td>
+                        <td><%= link_to "Visualizar", show_chamado_path(chamado), class: "btn btn-danger" %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </body>
+</html>
+<%= paginate @chamados %>

@@ -1,0 +1,58 @@
+<% @chamado.errors.full_messages.each do |message| %>
+    <div class="alert alert-danger" role="alert"><%=message%></div>
+<% end %>
+
+<%= form_for Chamado.new do |form| %>
+<div class="row">
+        <div class="col-sm-2">
+            <div class="form-group">
+                <%= form.label :nome %> 
+                <%= form.text_field :nome, class:"form-control" %>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="form-group">
+                <%= form.label :lastname %> 
+                <%= form.text_field :lastname, class:"form-control" %>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="form-group">
+                <%= form.label :departamento %> 
+                <%= form.text_field :departamento, class:"form-control" %>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="form-group">
+                <%= form.label :equipamento %> 
+                <%= form.text_field :equipamento, class:"form-control" %>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="form-group">        
+                <%= form.label :descricao %>
+                <%= form.text_area :descricao, class:"form-control", rows:4 %>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="form-group">
+                <%= form.label :data %> 
+                <%= form.text_field :data, :placeholder => "dd/mm/yyyy", class:"form-control" %>
+            </div>
+            </div>
+        <div>
+    </div>
+    </div>        
+        <%= form.submit texto_da_acao, class:"btn btn-primary" %>
+</div>
+<% end %>

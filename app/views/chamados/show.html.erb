@@ -1,0 +1,35 @@
+<table class="table table-bordered table-hover">
+    <td>
+        <h3>
+            <%= @chamado.nome %>
+            <%= @chamado.lastname %>
+        </h3>
+    </td>
+    
+    <tr>
+        <td><strong>Departamento:</strong></td>
+        <td><%= @chamado.departamento %></td><br>
+    </tr>
+
+    <tr>
+        <td><strong>Descricao do chamado:</strong></td>
+        <td><%= @chamado.descricao %></td><br>
+    </tr>
+
+    <div>
+        <tr>
+            <td><strong>Data:</strong></td>
+            <td><%= @chamado.data %></td>
+        </tr>
+    </div>
+
+</table>
+
+<div>
+    <td><%= link_to "Atualizar", edit_chamado_path(@chamado), class: "btn btn-danger" %></td><br><br>
+    <td><%= button_to "Excluir", @chamado, method: :delete, class:"btn btn-danger",
+    data: {confirm: "Tem certeza que deseja remover o chamado de #{@chamado.nome}?"} %></td>
+</div>
+
+
+

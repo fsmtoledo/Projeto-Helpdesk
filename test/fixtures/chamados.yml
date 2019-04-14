@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  lastname: MyString
+  departamento: MyString
+  equipamento: MyString
+  descricao: MyText
+  data: 2019-04-09 18:54:12
+
+two:
+  nome: MyString
+  lastname: MyString
+  departamento: MyString
+  equipamento: MyString
+  descricao: MyText
+  data: 2019-04-09 18:54:12
